@@ -1,0 +1,51 @@
+<html>
+
+	<head>
+	
+	<body>
+		<input id="foodname">
+		<button onclick="addFood()">Add</button>
+		<div id='foodlist'></div>
+	</body>
+	</head>
+
+	<script>
+		// global variable
+		var myFood = [];
+
+		function addFood() {
+
+			var iHandle = document.getElementById('foodname');
+			var dHandle = document.getElementById('foodlist');
+			var myHTML = '<ul>';
+			myFood.push(iHandle.value);
+			for(i=0;i<myFood.length;i++){
+				myHTML = myHTML + '<li>' + myFood[i] + '</li>';
+			}
+			var myHTML = myHTML + '</ul>'
+			console.log(myHTML);
+			dHandle.innerHTML = myHTML;
+		}
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
